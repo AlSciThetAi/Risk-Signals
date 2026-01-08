@@ -29,3 +29,7 @@ logs:
 # Open a psql session inside the Postgres container
 psql:
 	docker exec -it risk_postgres psql -U risk -d risk_signals
+
+#Add centroid data to ref.ref_county
+db-migrate:
+	docker exec -i risk_postgres psql -U risk -d risk_signals < scripts/sql/002_ref_county_centroids.sql

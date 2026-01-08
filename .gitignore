@@ -1,5 +1,6 @@
 # Secrets
 .env
+data/
 
 # Python
 __pycache__/

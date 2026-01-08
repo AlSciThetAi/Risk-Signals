@@ -17,6 +17,8 @@ FROM ref.ref_county_centroid c
 LEFT JOIN silver.earthquakes_by_county q
   ON q.county_fips = c.county_fips
  AND q.time_utc >= (now() - interval '14 days')
+ --Do not count minor quakes in the risk score
+ AND q.mag >= 2.5
 GROUP BY
   c.county_fips, c.county_name, c.state_fips, c.centroid_lat, c.centroid_lon;
 

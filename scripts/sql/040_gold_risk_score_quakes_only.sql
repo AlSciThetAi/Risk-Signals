@@ -28,9 +28,9 @@ SELECT
 
   -- “Why” explanation for the score (human readable)
   CASE
-    WHEN quakes_14d = 0 THEN 'No earthquakes detected in last 14 days'
-    WHEN quakes_14d = 1 THEN '1 earthquake detected in last 14 days'
-    ELSE quakes_14d::text || ' earthquakes detected in last 14 days'
+    WHEN quakes_14d = 0 THEN 'No earthquakes (M>=2.5) detected in last 14 days'
+    WHEN quakes_14d = 1 THEN '1 earthquake (M>=2.5) detected in last 14 days'
+    ELSE quakes_14d::text || ' earthquakes (M>=2.5) detected in last 14 days'
   END AS drivers
 
 FROM gold.quakes_14d_by_county;

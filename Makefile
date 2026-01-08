@@ -29,7 +29,10 @@ logs:
 # Open a psql session inside the Postgres container
 psql:
 	docker exec -it risk_postgres psql -U risk -d risk_signals
-
-#Add centroid data to ref.ref_county
+#Add centroid data to ref.ref_county amd add USGS earthquake data to bronze.usgs_earthquakes
 db-migrate:
-	docker exec -i risk_postgres psql -U risk -d risk_signals < scripts/sql/002_ref_county_centroids.sql
+	@set -e; \
+	for f in $$(ls -1 scripts/sql/*.sql | sort); do \
+		echo "Running $$f"; \
+		docker exec -i risk_postgres psql -U risk -d risk_signals < $$f; \
+	done

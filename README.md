@@ -19,6 +19,7 @@ Example output:
 - **Gold:** county `risk_score` + human-readable `drivers`
 
 ## Repo Layout
+```text
 docker/
     docker-compose.yml          #All requirements for docker creation
     initdb/
@@ -42,7 +43,7 @@ ingest/
 data/ref/                        # Reference datasets (county files, etc.)
 airflow/                         # Reserved for orchestration later
 dbt/                             # Reserved for modeling/testing later
-
+```
 ## Future Additions
 - Second API ingestion (NOAA Storms)
 - Third API ingestion (NWS Alerts)
@@ -75,4 +76,4 @@ make etl
 make psql
 # Then:
 SELECT * FROM gold_risk_score_quakes_only ORDER BY risk_score DESC LIMIT 25;
-
+```

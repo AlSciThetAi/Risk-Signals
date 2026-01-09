@@ -75,5 +75,5 @@ make etl
 # 3) View Results
 make psql
 # Then:
-SELECT * FROM gold_risk_score_quakes_only ORDER BY risk_score DESC LIMIT 25;
+SELECT * FROM gold.risk_score_by_county ORDER BY quakes_14d DESC LIMIT 25;
 ```

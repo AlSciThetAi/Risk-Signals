@@ -1,0 +1,123 @@
+[0m12:16:19.455049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a29edeedbb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a29ece083e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a29ec9a8c80>]}
+
+
+============================== 12:16:19.458109 | 14cf51b1-f419-41b7-a64e-9d8a3ec2edf0 ==============================
+[0m12:16:19.458109 [info ] [MainThread]: Running with dbt=1.11.2
+[0m12:16:19.458523 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'version_check': 'True', 'introspect': 'True', 'invocation_command': 'dbt init risk_signals', 'log_cache_events': 'False', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'warn_error': 'None', 'no_print': 'None', 'log_format': 'default', 'write_json': 'True', 'fail_fast': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'use_colors': 'True', 'static_parser': 'True', 'profiles_dir': '/home/mckin/.dbt', 'partial_parse': 'True', 'debug': 'False'}
+[0m12:16:19.464789 [info ] [MainThread]: Creating dbt configuration folder at /home/mckin/.dbt
+[0m12:16:19.465865 [debug] [MainThread]: Starter project path: /home/mckin/projects/risk-signals/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m12:16:19.468655 [info ] [MainThread]: 
+Your new dbt project "risk_signals" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:16:19.468948 [info ] [MainThread]: Setting up your profile.
+[0m12:18:57.162145 [info ] [MainThread]: Profile risk_signals written to /home/mckin/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:18:57.165297 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 157.72314, "process_in_blocks": "20352", "process_kernel_time": 0.140611, "process_mem_max_rss": "104280", "process_out_blocks": "80", "process_user_time": 1.112485}
+[0m12:18:57.165882 [debug] [MainThread]: Command `dbt init` succeeded at 12:18:57.165725 after 157.72 seconds
+[0m12:18:57.166366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a29ed0d0d40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a29ed1042c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a29ec9281d0>]}
+[0m12:18:57.166804 [debug] [MainThread]: Flushing usage events
+[0m12:18:57.417899 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:25:58.132333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e91701953a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e9170302480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e9170195430>]}
+
+
+============================== 12:25:58.136320 | 8b072355-2a63-4fff-b6f3-3a4dfd44ec3d ==============================
+[0m12:25:58.136320 [info ] [MainThread]: Running with dbt=1.11.2
+[0m12:25:58.136750 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'quiet': 'False', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'empty': 'None', 'fail_fast': 'False', 'no_print': 'None', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'use_experimental_parser': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'introspect': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'static_parser': 'True', 'profiles_dir': '/home/mckin/.dbt', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'log_format': 'default'}
+[0m12:25:58.151739 [info ] [MainThread]: dbt version: 1.11.2
+[0m12:25:58.152164 [info ] [MainThread]: python version: 3.12.3
+[0m12:25:58.152569 [info ] [MainThread]: python path: /home/mckin/projects/risk-signals/.venv/bin/python
+[0m12:25:58.152949 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m12:25:58.200704 [info ] [MainThread]: Using profiles dir at /home/mckin/.dbt
+[0m12:25:58.201115 [info ] [MainThread]: Using profiles.yml file at /home/mckin/.dbt/profiles.yml
+[0m12:25:58.201409 [info ] [MainThread]: Using dbt_project.yml file at /home/mckin/projects/risk-signals/dbt/dbt_project.yml
+[0m12:25:58.202117 [info ] [MainThread]: adapter type: postgres
+[0m12:25:58.202429 [info ] [MainThread]: adapter version: 1.10.0
+[0m12:25:58.202725 [info ] [MainThread]: Configuration:
+[0m12:25:58.202998 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:25:58.203270 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:25:58.203542 [info ] [MainThread]: Required dependencies:
+[0m12:25:58.203913 [debug] [MainThread]: Executing "git --help"
+[0m12:25:58.205509 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:25:58.205799 [debug] [MainThread]: STDERR: "b''"
+[0m12:25:58.206035 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:25:58.206313 [info ] [MainThread]: Connection:
+[0m12:25:58.206599 [info ] [MainThread]:   host: risk_signals
+[0m12:25:58.206870 [info ] [MainThread]:   port: 5432
+[0m12:25:58.207149 [info ] [MainThread]:   user: risk
+[0m12:25:58.207415 [info ] [MainThread]:   database: risk_signals
+[0m12:25:58.207692 [info ] [MainThread]:   schema: analytics
+[0m12:25:58.207965 [info ] [MainThread]:   connect_timeout: 10
+[0m12:25:58.208235 [info ] [MainThread]:   role: None
+[0m12:25:58.208504 [info ] [MainThread]:   search_path: None
+[0m12:25:58.208770 [info ] [MainThread]:   keepalives_idle: 0
+[0m12:25:58.209036 [info ] [MainThread]:   sslmode: None
+[0m12:25:58.209319 [info ] [MainThread]:   sslcert: None
+[0m12:25:58.209589 [info ] [MainThread]:   sslkey: None
+[0m12:25:58.209856 [info ] [MainThread]:   sslrootcert: None
+[0m12:25:58.210124 [info ] [MainThread]:   application_name: dbt
+[0m12:25:58.210388 [info ] [MainThread]:   retries: 1
+[0m12:25:58.210751 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m12:25:58.264674 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m12:25:58.289822 [debug] [MainThread]: Using postgres connection "debug"
+[0m12:25:58.290164 [debug] [MainThread]: On debug: select 1 as id
+[0m12:25:58.290423 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:26:08.299951 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "risk_signals" to address: Temporary failure in name resolution
+
+[0m12:26:18.192411 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m12:26:18.192809 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m12:26:18.193156 [debug] [MainThread]: On debug: No close available on handle
+[0m12:26:18.193448 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m12:26:18.193906 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m12:26:18.194254 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/mckin/projects/risk-signals/dbt/dbt_project.yml> not found
+
+[0m12:26:18.194604 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "risk_signals" to address: Temporary failure in name resolution
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m12:26:18.195498 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 20.227184, "process_in_blocks": "50848", "process_kernel_time": 0.198512, "process_mem_max_rss": "110036", "process_out_blocks": "32", "process_user_time": 1.187022}
+[0m12:26:18.195935 [debug] [MainThread]: Command `dbt debug` failed at 12:26:18.195773 after 20.23 seconds
+[0m12:26:18.196211 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:26:18.196486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e9170460860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e91702688f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e917085fe90>]}
+[0m12:26:18.196804 [debug] [MainThread]: Flushing usage events
+[0m12:26:18.457214 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:26:19.790426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e8908d425a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e89062c3740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e8906ca91c0>]}
+
+
+============================== 12:26:19.792757 | ed95469a-9c2b-4287-a5d9-60bb3f185c2b ==============================
+[0m12:26:19.792757 [info ] [MainThread]: Running with dbt=1.11.2
+[0m12:26:19.793175 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'empty': 'None', 'target_path': 'None', 'version_check': 'True', 'log_format': 'default', 'invocation_command': 'dbt ls', 'fail_fast': 'False', 'no_print': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'printer_width': '80', 'profiles_dir': '/home/mckin/.dbt', 'log_cache_events': 'False', 'static_parser': 'True', 'log_path': 'logs', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'quiet': 'False'}
+[0m12:26:19.793595 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/mckin/projects/risk-signals/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:26:19.794356 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": false, "command_wall_clock_time": 0.05084466, "process_in_blocks": "0", "process_kernel_time": 0.123494, "process_mem_max_rss": "99520", "process_out_blocks": "8", "process_user_time": 1.019824}
+[0m12:26:19.794730 [debug] [MainThread]: Command `dbt ls` failed at 12:26:19.794630 after 0.05 seconds
+[0m12:26:19.795015 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e8908e56c60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e89062c3740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e890626fb60>]}
+[0m12:26:19.795320 [debug] [MainThread]: Flushing usage events
+[0m12:26:19.975637 [debug] [MainThread]: An error was encountered while trying to flush usage events

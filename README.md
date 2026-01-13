@@ -44,11 +44,15 @@ data/ref/                        # Reference datasets (county files, etc.)
 airflow/                         # Reserved for orchestration later
 dbt/                             # Reserved for modeling/testing later
 ```
+## dbt lineage (DAG)
+
+![dbt DAG](docs/images/dbt_dag.png)
+
 ## Future Additions
 - Second API ingestion (NOAA Storms)
 - Third API ingestion (NWS Alerts)
 - Airflow Orchestration
-- dbt Transformations
+
 
 ## Future Industry Use Cases 
 - Insurance (P&C): inform underwriting/pricing, exposure management, and claims triage by tracking near–real-time hazard signals (storms/quakes/fires) by county/ZIP with explainable drivers.

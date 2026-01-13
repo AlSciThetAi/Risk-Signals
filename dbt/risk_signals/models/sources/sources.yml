@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: usgs_earthquakes
+        columns:
+          - name: quake_id
+            tests:
+              - not_null
+              - unique
+
+  - name: ref
+    schema: ref
+    tables:
+      - name: ref_county
+      - name: ref_county_centroid

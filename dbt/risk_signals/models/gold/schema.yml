@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: quakes_14d_by_county
+    columns:
+      - name: county_fips
+        tests: [not_null]
+      - name: quakes_14d
+        tests: [not_null]
+
+  - name: risk_score_quakes_only
+    columns:
+      - name: county_fips
+        tests: [not_null]
+      - name: risk_score
+        tests: [not_null]

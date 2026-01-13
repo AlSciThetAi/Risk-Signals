@@ -51,13 +51,23 @@ ingest-usgs-earthquakes:
 
 #Run load ref county script
 load-ref-county:
+	# Drop dependent view so the table can be replaced
 	docker exec -i risk_postgres psql -v ON_ERROR_STOP=1 -U risk -d risk_signals -c "DROP VIEW IF EXISTS ref.ref_county_centroid;"
+	# Replace county table
 	$(PYTHON) -m scripts.load_ref_county data/ref/cb_2018_us_county_500k.zip
+	# Recreate centroid view immediately (dbt depends on it)
+	docker exec -i risk_postgres psql -v ON_ERROR_STOP=1 -U risk -d risk_signals < scripts/sql/002_ref_county_centroids.sql
 
 # Run full ETL process
-etl: up db-migrate load-ref-county ingest-usgs-earthquakes db-migrate
+etl: up db-migrate load-ref-county ingest-usgs-earthquakes dbt-run dbt-test
 	@echo "ETL process complete"
 
 #Check python DB connection
 check-db-connection:
 	$(PYTHON) -m scripts.db_smoke_test
+# Run dbt commands
+dbt-run:
+	cd dbt/risk_signals && dbt run
+
+dbt-test:
+	cd dbt/risk_signals && dbt test
